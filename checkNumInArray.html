@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm giá trị trong mảng</title>
+</head>
+<body>
+<input id="enternum" type="number">
+<button id="add" onclick="add()">Add</button>
+<button id="check" onclick="check()">Check</button>
+<p id="1"></p>
+<script>
+    let arr = new Array();
+    function add(){
+        arr.push(document.getElementById("enternum").value);
+    }
+    function check(){
+        let num = +prompt("nhap 1 so");
+        for(let i = 0; i < arr.length; i++){
+            if(arr[i] == num){
+                document.write(num + " co nam trong mang o vi tri " + i + "<br>");
+            }
+            else
+                {
+                    document.getElementById("1").innerHTML = num + " khong co trong mang";
+                }
+        }
+    }
+</script>
+</body>
+</html>
